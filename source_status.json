@@ -1,0 +1,153 @@
+{
+ "updated": "2026-10-10 13:25",
+ "sources": {
+  "內政部移民署": {
+   "ok": true,
+   "note": "20 則，相關 5"
+  },
+  "行政院": {
+   "ok": true,
+   "note": "100 則，相關 2"
+  },
+  "衛生福利部": {
+   "ok": true,
+   "note": "20 則，相關 0"
+  },
+  "教育部": {
+   "ok": true,
+   "note": "50 則，相關 0"
+  },
+  "中央社-政治": {
+   "ok": true,
+   "note": "20 則，相關 0"
+  },
+  "中央社-社會": {
+   "ok": true,
+   "note": "20 則，相關 2"
+  },
+  "中央社-地方": {
+   "ok": true,
+   "note": "20 則，相關 0"
+  },
+  "中央社-國際": {
+   "ok": true,
+   "note": "20 則，相關 0"
+  },
+  "中央社-生活": {
+   "ok": true,
+   "note": "20 則，相關 1"
+  },
+  "官方/中央社索引 (site:gov.tw)": {
+   "ok": true,
+   "note": "候選 253 則"
+  },
+  "官方/中央社索引 (site:cna.com.tw)": {
+   "ok": true,
+   "note": "候選 162 則"
+  },
+  "官方/中央社索引 (site:gov.taipei)": {
+   "ok": true,
+   "note": "候選 158 則"
+  },
+  "索引 ntpc.gov.tw": {
+   "ok": true,
+   "note": "相關 6"
+  },
+  "索引 tycg.gov.tw": {
+   "ok": true,
+   "note": "相關 9"
+  },
+  "索引 taichung.gov.tw": {
+   "ok": true,
+   "note": "相關 3"
+  },
+  "索引 tainan.gov.tw": {
+   "ok": true,
+   "note": "相關 11"
+  },
+  "索引 kcg.gov.tw": {
+   "ok": true,
+   "note": "相關 9"
+  },
+  "索引 klcg.gov.tw": {
+   "ok": true,
+   "note": "相關 11"
+  },
+  "索引 hccg.gov.tw": {
+   "ok": true,
+   "note": "相關 0"
+  },
+  "索引 hsinchu.gov.tw": {
+   "ok": true,
+   "note": "相關 3"
+  },
+  "索引 miaoli.gov.tw": {
+   "ok": true,
+   "note": "相關 8"
+  },
+  "索引 chcg.gov.tw": {
+   "ok": true,
+   "note": "相關 10"
+  },
+  "索引 nantou.gov.tw": {
+   "ok": true,
+   "note": "相關 1"
+  },
+  "索引 yunlin.gov.tw": {
+   "ok": true,
+   "note": "相關 3"
+  },
+  "索引 chiayi.gov.tw": {
+   "ok": true,
+   "note": "相關 1"
+  },
+  "索引 cyhg.gov.tw": {
+   "ok": true,
+   "note": "相關 0"
+  },
+  "索引 pthg.gov.tw": {
+   "ok": true,
+   "note": "相關 2"
+  },
+  "索引 e-land.gov.tw": {
+   "ok": true,
+   "note": "相關 0"
+  },
+  "索引 hl.gov.tw": {
+   "ok": true,
+   "note": "相關 2"
+  },
+  "索引 taitung.gov.tw": {
+   "ok": true,
+   "note": "相關 0"
+  },
+  "索引 penghu.gov.tw": {
+   "ok": true,
+   "note": "相關 0"
+  },
+  "索引 kinmen.gov.tw": {
+   "ok": true,
+   "note": "相關 1"
+  },
+  "索引 matsu.gov.tw": {
+   "ok": true,
+   "note": "相關 1"
+  },
+  "索引 mol.gov.tw": {
+   "ok": true,
+   "note": "相關 1"
+  },
+  "索引 ocac.gov.tw": {
+   "ok": true,
+   "note": "相關 0"
+  },
+  "索引 moi.gov.tw": {
+   "ok": true,
+   "note": "相關 8"
+  },
+  "_原文無法讀取的網站（僅保留標題連結）": {
+   "ok": false,
+   "note": "findbiz.nat.gov.tw 1則(HTTP 403); dep-civil.hccg.gov.tw 1則(HTTP 403); trillionplan.ndc.gov.tw 2則(HTTP 403); www.hccg.gov.tw 2則(HTTP 403); www.tycg.gov.tw 10則(HTTP 428); lis.ly.gov.tw 1則(SSLError); www.ndc.gov.tw 2則(HTTP 403); society.hccg.gov.tw 1則(HTTP 403); www.immigration.gov.tw 1則(HTTP 404); coa.immigration.gov.tw 1則(HTTP 404); reg.802.mnd.gov.tw 1則(HTTP 403); reg.815.mnd.gov.tw 1則(HTTP 403); tam.gov.taipei 1則(HTTP 404); www.gov.taipei 2則(HTTP 404); doit.gov.taipei 1則(HTTP 404); bola.gov.taipei 3則(HTTP 404); www-ws.gov.taipei 1則(HTTP 404); pxweb.kcg.gov.tw 6則(SSLError); social.hsinchu.gov.tw 1則(SSLError); www.hsinchu.gov.tw 2則(SSLError); www.yunlin.gov.tw 1則(HTTP 403); socmap.pthg.gov.tw 1則(SSLError); www.pthg.gov.tw 1則(SSLError); phb.kinmen.gov.tw 1則(SSLError)"
+  }
+ }
+}

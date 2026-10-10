@@ -1,0 +1,12 @@
+*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;background:#f4f6f8;color:#222}
+.wrap{max-width:960px;margin:auto;padding:0 16px}header{background:linear-gradient(90deg,#0b5f8a,#1a8fbf);color:#fff}
+.hd{display:flex;justify-content:space-between;align-items:center;padding:18px 16px}h1{margin:0;font-size:24px}.org{font-size:15px;opacity:.9}
+nav{display:flex;gap:4px;padding-bottom:0}nav button{background:none;border:0;color:#fff;padding:10px 16px;font-size:15px;cursor:pointer;border-radius:8px 8px 0 0}
+nav button.on{background:#f4f6f8;color:#0b5f8a;font-weight:bold}.bar{display:flex;gap:8px;margin:16px 0 4px;flex-wrap:wrap}
+.bar input{flex:1;min-width:200px}.bar input,.bar select{padding:9px;border:1px solid #ccd;border-radius:6px;font-size:15px}
+.meta{color:#666;font-size:13px}ul{list-style:none;padding:0}li{background:#fff;border-radius:8px;padding:14px 16px;margin-bottom:10px;box-shadow:0 1px 3px #0001}
+.tags{display:flex;gap:8px;font-size:12px;align-items:center;color:#666}.c{padding:2px 8px;border-radius:10px;color:#fff}.c-中央{background:#0b5f8a}.c-地方{background:#2e8b57}.c-媒體{background:#c0662b}
+.t{display:block;font-size:17px;font-weight:bold;color:#123;margin:6px 0;text-decoration:none}.t:hover{color:#0b5f8a}li p{margin:4px 0;font-size:14px;line-height:1.6;color:#444}
+.src{font-size:13px;color:#0b5f8a}#more{display:block;margin:10px auto;padding:10px 30px;border:1px solid #0b5f8a;background:#fff;color:#0b5f8a;border-radius:6px;cursor:pointer}
+.note{font-size:12px;color:#888}footer{background:#123;color:#ccd;font-size:13px;padding:18px 0;margin-top:20px}
+@media(max-width:600px){h1{font-size:18px}.hd{flex-direction:column;align-items:flex-start;gap:4px}nav button{padding:8px 10px;font-size:14px}}
