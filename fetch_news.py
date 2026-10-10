@@ -67,7 +67,7 @@ def classify(url, src_name=''):
 BAD_URL = re.compile(r'(coa\.immigration|coa-frontend|/apply|/verify|/login|Download\.ashx|getFile|/Attachment/|/media/|\.pdf|\.docx?|\.xlsx?|\.ods|\.odt|'
  r'data\.[a-z]+\.gov\.tw|pxweb|statdb|/DataSet/|/Resource/|faq|/viewService/|/app/map|socmap|nhicore|law-out|LawContent|/egFront/|gazette\.nat|'
  r'export|Video_Content|News_Video|/tag/|servicestation\.immigration\.gov\.tw/\d+/?$|/bidding/|/File/|judicial\.gov\.tw/tw/cp-144|/cp\.aspx|/business/)', re.I)
-BAD_TITLE = re.compile(r'(線上申辦|申辦系統|Online Application|Application System|Gold Card|- Immigration|專區$|專區\s*-|服務站-|事務大隊-|關鍵字新聞|常見問答|如何辦理|如何處理|須知|嗎[？?]|要幾分|呢[？?]|'
+BAD_TITLE = re.compile(r'(^\\s*-|中文網$|線上申辦|申辦系統|Online Application|Application System|Gold Card|- Immigration|專區$|專區\s*-|服務站-|事務大隊-|關鍵字新聞|常見問答|如何辦理|如何處理|須知|嗎[？?]|要幾分|呢[？?]|'
  r'統計|人數|一覽表|表格[:：]|報告$|會議紀錄|會議記錄|錄取|徵.*社工|約用|採購|勞務|問卷|公示送達|登記|系統維護|日程表|機構資訊|影音|微電影|影片|海報|表\s*\d+|'
  r'作業流程|檢送|名冊|影本|居留證號|免徵|富豪|業務專區|政治獻金法-)')
 def is_news(title, url):
