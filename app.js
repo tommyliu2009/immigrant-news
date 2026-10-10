@@ -8,6 +8,8 @@ function render(){const u=$('#unit').value;let a=NEWS.filter(n=>(cat=='全部'||
 a.sort((x,y)=>$('#sort').value=='asc'?x.date.localeCompare(y.date):y.date.localeCompare(x.date));
 $('#meta').textContent=`共 ${a.length} 則｜資料更新：${UPDATED}`;
 $('#list').innerHTML=a.slice(0,shown).map(n=>`<li><div class="tags"><span class="c c-${n.category}">${L[n.category]}</span><span class="u">${esc(n.unit)}</span><time>${n.date||"日期待確認"}</time></div>
-<a class="t" href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a><p>${esc(n.summary)||'<i>（原網頁未提供摘要，請點原始連結閱讀）</i>'}</p>
-<a class="src" href="${esc(n.url)}" target="_blank" rel="noopener">原始連結 ↗</a></li>`).join('');$('#more').style.display=a.length>shown?'':'none'}
+<a class="t" href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a><p class="sum">${esc(n.summary)}</p><button class="tog" hidden>展開摘要 ▾</button>
+<a class="src" href="${esc(n.url)}" target="_blank" rel="noopener">原始連結 ↗</a></li>`).join('');$('#more').style.display=a.length>shown?'':'none';
+document.querySelectorAll('#list li').forEach(li=>{const p=li.querySelector('.sum'),b=li.querySelector('.tog');if(p.scrollHeight>p.clientHeight+2)b.hidden=false})}
+$('#list').addEventListener('click',e=>{const b=e.target.closest('.tog');if(!b)return;const p=b.previousElementSibling,o=p.classList.toggle('open');b.textContent=o?'收合摘要 ▴':'展開摘要 ▾'});
 ['unit','sort'].forEach(i=>$('#'+i).addEventListener('input',()=>{shown=30;render()}));$('#more').onclick=()=>{shown+=30;render()};fillUnits();render();

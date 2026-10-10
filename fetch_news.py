@@ -186,13 +186,16 @@ def main():
             if c['src'] == '內政部移民署': cat, unit = '中央', '內政部移民署'
             if not relevant(c['title'] + ' ' + s): rejected.add(c['title']); continue
             date = pd
-            db[c['url']] = dict(title=c['title'], url=c['url'], date=date, category=cat, unit=unit, summary=s,
+            # 程式只放暫時摘要（summary_ok=False），不會上線；須由每日排程寫好 50～200 字摘要後用 apply_summaries.py 寫回
+            db[c['url']] = dict(title=c['title'], url=c['url'], date=date, category=cat, unit=unit, summary=s, summary_ok=False,
                                 added=dt.datetime.now().strftime('%Y-%m-%d'))
     json.dump(sorted(rejected), open('rejected.json','w'), ensure_ascii=False)
     json.dump(db, open(DB, 'w'), ensure_ascii=False, indent=0)
     status['_原文取不到發布日（未收錄）'] = {'ok': True, 'note': f'{no_date} 則'}
     status['_原文無法讀取的網站（未收錄）'] = {'ok': not fail_hosts, 'note': '; '.join(f'{h} {n}則({e})' for h,(n,e) in fail_hosts.items())}
     json.dump(dict(updated=dt.datetime.now().strftime('%Y-%m-%d %H:%M'), sources=status), open(STATUS,'w'), ensure_ascii=False, indent=1)
-    print('資料庫共', len(db), '則')
+    pend = [dict(url=u, title=v['title'], date=v['date'], unit=v['unit'], hint=v.get('summary','')) for u, v in db.items() if not v.get('summary_ok')]
+    json.dump(pend, open('pending_summary.json','w'), ensure_ascii=False, indent=1)
+    print('資料庫共', len(db), '則；待寫摘要（未上線）', len(pend), '則 → pending_summary.json')
 if __name__ == '__main__':
     main()
