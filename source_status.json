@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10 17:26",
+ "updated": "2026-10-11 03:54",
  "sources": {
   "內政部移民署": {
    "ok": true,
@@ -39,19 +39,19 @@
   },
   "官方/中央社索引 (site:gov.tw)": {
    "ok": true,
-   "note": "候選 227 則"
+   "note": "候選 232 則"
   },
   "官方/中央社索引 (site:cna.com.tw)": {
    "ok": true,
-   "note": "候選 124 則"
+   "note": "候選 122 則"
   },
   "官方/中央社索引 (site:gov.taipei)": {
    "ok": true,
-   "note": "候選 109 則"
+   "note": "候選 112 則"
   },
   "索引 ntpc.gov.tw": {
    "ok": true,
-   "note": "相關 3"
+   "note": "相關 5"
   },
   "索引 tycg.gov.tw": {
    "ok": true,
@@ -59,7 +59,7 @@
   },
   "索引 taichung.gov.tw": {
    "ok": true,
-   "note": "相關 2"
+   "note": "相關 1"
   },
   "索引 tainan.gov.tw": {
    "ok": true,
@@ -67,11 +67,11 @@
   },
   "索引 kcg.gov.tw": {
    "ok": true,
-   "note": "相關 3"
+   "note": "相關 4"
   },
   "索引 klcg.gov.tw": {
    "ok": true,
-   "note": "相關 2"
+   "note": "相關 3"
   },
   "索引 hccg.gov.tw": {
    "ok": true,
@@ -95,7 +95,7 @@
   },
   "索引 yunlin.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 0"
   },
   "索引 chiayi.gov.tw": {
    "ok": true,
@@ -127,7 +127,7 @@
   },
   "索引 kinmen.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 0"
   },
   "索引 matsu.gov.tw": {
    "ok": true,
@@ -147,11 +147,11 @@
   },
   "_原文取不到發布日（未收錄）": {
    "ok": true,
-   "note": "1 則"
+   "note": "18 則"
   },
   "_原文無法讀取的網站（未收錄）": {
    "ok": false,
-   "note": "www.tycg.gov.tw 1則(HTTP 428)"
+   "note": "icity.hccg.gov.tw 1則(HTTP 403); www.hccg.gov.tw 2則(HTTP 403); www.tycg.gov.tw 1則(HTTP 428); register.typc.mohw.gov.tw 1則(SSLError); netreg.puzih.mohw.gov.tw 1則(HTTP 403); newreg.syh.mohw.gov.tw 1則(HTTP 403); www03.taic.mohw.gov.tw 1則(HTTP 403); sencir.k12ea.gov.tw 1則(SSLError); netreg.kmhp.mohw.gov.tw 1則(HTTP 403)"
   }
  }
 }
