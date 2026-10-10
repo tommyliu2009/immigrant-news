@@ -35,3 +35,4 @@ footer{background:#111;color:#bbb;padding:24px 0;font-size:14px}footer b{color:#
 @media(max-width:640px){.wrap{padding:0 14px}.brand b{font-size:21px}.mark{width:42px;height:42px;font-size:24px}.masthead .wrap{padding:14px}
 .grid{grid-template-columns:1fr}.lead{padding:18px}.lead h2{font-size:23px}.lead .sum{font-size:16px}
 .sum{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.sum.open{display:block}.tog{display:block}.topbar #upd{display:none}}
+.tog[hidden]{display:none!important}
