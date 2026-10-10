@@ -1,13 +1,20 @@
 <!DOCTYPE html><html lang="zh-Hant-TW"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>新住民&新移民全球新聞網｜仁傳媒有限公司</title><meta name="description" content="每日彙整中央部會、各縣市政府與中央社的新住民、新移民相關新聞。">
+<title>新住民&amp;新移民全球新聞網</title><meta name="description" content="每日彙整中央部會、各縣市政府與中央社的新住民、新移民相關新聞。">
 <link rel="stylesheet" href="style.css"></head><body>
-<header><div class="wrap hd"><h1>新住民&amp;新移民全球新聞網</h1></div>
-<nav class="wrap" id="tabs"></nav></header>
+<div class="topbar"><div class="wrap"><span id="today"></span><span id="upd"></span></div></div>
+<header class="masthead"><div class="wrap"><a href="./" class="brand"><span class="mark">新</span><span><b>新住民&amp;新移民全球新聞網</b><small>NEW IMMIGRANT GLOBAL NEWS</small></span></a></div></header>
+<nav class="catnav"><div class="wrap" id="tabs"></div></nav>
 <main class="wrap">
-<div class="bar"><select id="unit"><option value="">全部單位</option></select>
-<select id="sort"><option value="desc">日期：新→舊</option><option value="asc">日期：舊→新</option></select></div>
-<p class="meta" id="meta"></p><ul id="list"></ul><button id="more">載入更多</button>
+<section id="home">
+ <div class="hero"><div id="lead"></div><div id="subs"></div></div>
+ <div class="cols"><div class="maincol">
+  <section class="block" data-cat="中央"><h2><span>中央政府</span><a data-go="中央">更多 ›</a></h2><div class="grid"></div></section>
+  <section class="block" data-cat="地方"><h2><span>地方政府</span><a data-go="地方">更多 ›</a></h2><div class="grid"></div></section>
+  <section class="block" data-cat="媒體"><h2><span>中央社</span><a data-go="媒體">更多 ›</a></h2><div class="grid"></div></section>
+ </div><aside class="side"></aside></div>
+</section>
+<section id="catview" hidden><div class="cols"><div class="maincol"><h2 class="cattitle" id="ctitle"></h2><p class="meta" id="cmeta"></p><div class="list" id="clist"></div><button id="more">載入更多</button></div><aside class="side"></aside></div></section>
 <p class="note">本站摘要由編輯依原文內容整理，完整內容請點原始連結閱讀，著作權屬原發布單位。</p>
 </main>
-<footer><div class="wrap">© <span id="yr"></span> 仁傳媒有限公司｜資料來源：中央部會、各縣市政府新聞公告、中央社｜每日自動更新</div></footer>
+<footer><div class="wrap"><b>新住民&amp;新移民全球新聞網</b><p>資料來源：中央部會、各縣市政府新聞公告、中央社｜每日自動更新</p><p>© 2026 仁傳媒有限公司</p></div></footer>
 <script src="data.js"></script><script src="app.js"></script></body></html>

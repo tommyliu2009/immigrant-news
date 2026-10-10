@@ -1,16 +1,37 @@
-*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;background:#f4f6f8;color:#222}
-.wrap{max-width:960px;margin:auto;padding:0 16px}header{background:linear-gradient(90deg,#0b5f8a,#1a8fbf);color:#fff}
-.hd{display:flex;justify-content:space-between;align-items:center;padding:18px 16px}h1{margin:0;font-size:24px}.org{font-size:15px;opacity:.9}
-nav{display:flex;gap:4px;padding-bottom:0}nav button{background:none;border:0;color:#fff;padding:10px 16px;font-size:15px;cursor:pointer;border-radius:8px 8px 0 0}
-nav button.on{background:#f4f6f8;color:#0b5f8a;font-weight:bold}.bar{display:flex;gap:8px;margin:16px 0 4px;flex-wrap:wrap}
-.bar input{flex:1;min-width:200px}.bar input,.bar select{padding:9px;border:1px solid #ccd;border-radius:6px;font-size:15px}
-.meta{color:#666;font-size:13px}ul{list-style:none;padding:0}li{background:#fff;border-radius:8px;padding:14px 16px;margin-bottom:10px;box-shadow:0 1px 3px #0001}
-.tags{display:flex;gap:8px;font-size:12px;align-items:center;color:#666}.c{padding:2px 8px;border-radius:10px;color:#fff}.c-中央{background:#0b5f8a}.c-地方{background:#2e8b57}.c-媒體{background:#c0662b}
-.t{display:block;font-size:17px;font-weight:bold;color:#123;margin:6px 0;text-decoration:none}.t:hover{color:#0b5f8a}li p{margin:4px 0;font-size:14px;line-height:1.6;color:#444}
-.src{font-size:13px;color:#0b5f8a}#more{display:block;margin:10px auto;padding:10px 30px;border:1px solid #0b5f8a;background:#fff;color:#0b5f8a;border-radius:6px;cursor:pointer}
-.note{font-size:12px;color:#888}footer{background:#123;color:#ccd;font-size:13px;padding:18px 0;margin-top:20px}
-@media(max-width:600px){h1{font-size:18px}.hd{flex-direction:column;align-items:flex-start;gap:4px}nav button{padding:8px 10px;font-size:14px}}
-
-.sum{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;line-height:1.7;margin:.4em 0}
-.sum.open{display:block;-webkit-line-clamp:unset}
-.tog{background:none;border:0;color:#0a66c2;cursor:pointer;padding:0;font-size:.9em;margin-bottom:.3em}
+:root{--ink:#1a1a1a;--mute:#666;--line:#e3e0da;--bg:#faf9f6;--red:#b3122e;--c1:#1f4e8c;--c2:#2e7d4f;--c3:#b3122e;--serif:"Noto Serif TC","Source Han Serif TC","PMingLiU",serif;--sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 var(--sans)}a{color:inherit;text-decoration:none;cursor:pointer}a:hover{color:var(--red)}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.topbar{background:#111;color:#ccc;font-size:13px}.topbar .wrap{display:flex;justify-content:space-between;padding:6px 20px}
+.masthead{background:#fff;border-bottom:1px solid var(--line)}.masthead .wrap{padding:22px 20px}
+.brand{display:flex;align-items:center;gap:14px}.mark{background:var(--red);color:#fff;font:700 30px/1 var(--serif);width:54px;height:54px;display:grid;place-items:center;border-radius:4px}
+.brand b{display:block;font:900 30px/1.2 var(--serif);letter-spacing:1px}.brand small{color:var(--mute);letter-spacing:3px;font-size:12px}
+.catnav{background:#fff;border-bottom:3px solid var(--ink);position:sticky;top:0;z-index:5}.catnav .wrap{display:flex;overflow-x:auto}
+.catnav button{background:none;border:0;font:600 16px var(--sans);padding:12px 18px;cursor:pointer;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-3px}
+.catnav button.on,.catnav button:hover{color:var(--red);border-color:var(--red)}
+main{padding-top:24px}
+.hero{display:grid;grid-template-columns:2fr 1fr;gap:28px;padding-bottom:24px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.lead{background:#fff;border-top:6px solid var(--red);padding:26px 28px}.lead h2{font:900 30px/1.4 var(--serif);margin:10px 0 14px}.lead .sum{font-size:18px}
+.kicker{font:700 15px var(--sans);border-bottom:2px solid var(--ink);margin:0 0 6px;padding-bottom:6px}
+.subh{padding:12px 0;border-bottom:1px solid var(--line)}.subh h3{font:700 17px/1.5 var(--serif);margin:4px 0 0}
+.cols{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:32px}
+.block{margin-bottom:32px}.block h2,.cattitle{display:flex;justify-content:space-between;align-items:baseline;font:900 22px var(--serif);border-bottom:2px solid var(--ink);padding-bottom:6px;margin:0 0 16px}
+.block h2 span{border-left:6px solid var(--red);padding-left:10px}.block h2 a{font:500 14px var(--sans);color:var(--mute)}
+.block[data-cat=中央] h2 span{border-color:var(--c1)}.block[data-cat=地方] h2 span{border-color:var(--c2)}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.card{background:#fff;border:1px solid var(--line);padding:16px 18px;display:flex;flex-direction:column}.card h3{font:700 18px/1.5 var(--serif);margin:8px 0}
+.card.row{margin-bottom:14px}.sum{margin:0 0 8px;color:#333}
+.meta{font-size:13px;color:var(--mute);display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.tag{color:#fff;padding:1px 8px;border-radius:2px;font-weight:600;font-size:12px}.t-中央{background:var(--c1)}.t-地方{background:var(--c2)}.t-媒體{background:var(--c3)}
+.unit{font-weight:600;color:#444}
+.src{margin-top:auto;font-size:14px;color:var(--red);font-weight:600}.tog{display:none;background:none;border:0;color:var(--c1);padding:0 0 6px;cursor:pointer;font-size:14px;text-align:left}
+.box{background:#fff;border:1px solid var(--line);padding:16px 18px;margin-bottom:20px}.box h4{font:900 18px var(--serif);margin:0 0 10px;border-bottom:2px solid var(--ink);padding-bottom:6px}
+.grp{font-weight:700;font-size:14px;margin:10px 0 4px;color:var(--mute)}.units{list-style:none;padding:0;margin:0}
+.units a{display:flex;justify-content:space-between;font-size:14px;padding:3px 0}.units a.on{color:var(--red);font-weight:700}.units em{font-style:normal;color:var(--mute)}
+.latest{padding-left:20px;margin:0}.latest li{padding:6px 0;border-bottom:1px dashed var(--line);font:600 15px/1.5 var(--serif)}.latest time{display:block;font:12px var(--sans);color:var(--mute)}
+#more{display:block;margin:10px auto 30px;padding:10px 30px;border:1px solid var(--ink);background:#fff;cursor:pointer}
+.note{font-size:13px;color:var(--mute);border-top:1px solid var(--line);padding:16px 0}
+footer{background:#111;color:#bbb;padding:24px 0;font-size:14px}footer b{color:#fff;font-family:var(--serif)}footer p{margin:4px 0}
+@media(max-width:900px){.hero,.cols{grid-template-columns:1fr}}
+@media(max-width:640px){.wrap{padding:0 14px}.brand b{font-size:21px}.mark{width:42px;height:42px;font-size:24px}.masthead .wrap{padding:14px}
+.grid{grid-template-columns:1fr}.lead{padding:18px}.lead h2{font-size:23px}.lead .sum{font-size:16px}
+.sum{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.sum.open{display:block}.tog{display:block}.topbar #upd{display:none}}
