@@ -62,6 +62,17 @@ def classify(url, src_name=''):
         return '中央', src_name or host
     return '媒體', src_name or host
 
+
+# ---- 非新聞過濾規則 ----
+BAD_URL = re.compile(r'(coa\.immigration|coa-frontend|/apply|/verify|/login|Download\.ashx|getFile|/Attachment/|/media/|\.pdf|\.docx?|\.xlsx?|\.ods|\.odt|'
+ r'data\.[a-z]+\.gov\.tw|pxweb|statdb|/DataSet/|/Resource/|faq|/viewService/|/app/map|socmap|nhicore|law-out|LawContent|/egFront/|gazette\.nat|'
+ r'export|Video_Content|News_Video|/tag/|servicestation\.immigration\.gov\.tw/\d+/?$|/bidding/|/File/|judicial\.gov\.tw/tw/cp-144|/cp\.aspx|/business/)', re.I)
+BAD_TITLE = re.compile(r'(線上申辦|申辦系統|Online Application|Application System|Gold Card|- Immigration|專區$|專區\s*-|服務站-|事務大隊-|關鍵字新聞|常見問答|如何辦理|如何處理|須知|嗎[？?]|要幾分|呢[？?]|'
+ r'統計|人數|一覽表|表格[:：]|報告$|會議紀錄|會議記錄|錄取|徵.*社工|約用|採購|勞務|問卷|公示送達|登記|系統維護|日程表|機構資訊|影音|微電影|影片|海報|表\s*\d+|'
+ r'作業流程|檢送|名冊|影本|居留證號|免徵|富豪|業務專區|政治獻金法-)')
+def is_news(title, url):
+    return not BAD_URL.search(url or '') and not BAD_TITLE.search(title or '')
+
 def relevant(text):
     return any(k in text for k in STRONG)
 
@@ -142,7 +153,14 @@ def main():
             try:
                 d = gnewsdecoder(c['glink'], interval=1); c['url'] = d.get('decoded_url') if d.get('success') else None
             except Exception: c['url'] = None
-    todo = [c for c in todo if c['url']]
+    try: rej_urls = set(json.load(open('rejected_urls.json')))
+    except Exception: rej_urls = set()
+    keep = []
+    for c in todo:
+        if not c['url'] or c['url'] in rej_urls: continue
+        if not c.get('pub') or not is_news(c['title'], c['url']): rejected.add(c['title']); continue
+        keep.append(c)
+    todo = keep
     fail_hosts = {}
     def work(c):
         s, st = get_meta_summary(c['url']); return c, s, st
@@ -153,6 +171,7 @@ def main():
                 fail_hosts.setdefault(host, [0, st])[0] += 1
                 d = re.sub(r'\s+', ' ', html.unescape(c.get('desc') or '')).strip()
                 s = (d[:100] + ('…' if len(d) > 100 else '')) if len(d) > 20 else ''
+                if not s and c['src'] not in RSS and not any(x in c['url'] for x in ('News_Content','cna.com.tw','/post','News/Detail','NewsDetail','newsdetail','bulletin')): rejected.add(c['title']); continue
             cat, unit = classify(c['url'], c['src'])
             if c['src'] == '內政部移民署': cat, unit = '中央', '內政部移民署'
             if not relevant(c['title'] + ' ' + s): rejected.add(c['title']); continue
