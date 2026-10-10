@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-10 17:15",
+ "updated": "2026-10-10 17:26",
  "sources": {
   "內政部移民署": {
    "ok": true,
@@ -43,11 +43,11 @@
   },
   "官方/中央社索引 (site:cna.com.tw)": {
    "ok": true,
-   "note": "候選 125 則"
+   "note": "候選 124 則"
   },
   "官方/中央社索引 (site:gov.taipei)": {
    "ok": true,
-   "note": "候選 110 則"
+   "note": "候選 109 則"
   },
   "索引 ntpc.gov.tw": {
    "ok": true,
@@ -71,7 +71,7 @@
   },
   "索引 klcg.gov.tw": {
    "ok": true,
-   "note": "相關 3"
+   "note": "相關 2"
   },
   "索引 hccg.gov.tw": {
    "ok": true,
@@ -145,9 +145,13 @@
    "ok": true,
    "note": "相關 1"
   },
-  "_原文無法讀取的網站（僅保留標題連結）": {
+  "_原文取不到發布日（未收錄）": {
+   "ok": true,
+   "note": "1 則"
+  },
+  "_原文無法讀取的網站（未收錄）": {
    "ok": false,
-   "note": "society.hccg.gov.tw 1則(HTTP 403); www.judicial.gov.tw 1則(HTTP 404); trillionplan.ndc.gov.tw 2則(HTTP 403); www.tycg.gov.tw 2則(HTTP 428); www.hccg.gov.tw 5則(HTTP 403); theme.ndc.gov.tw 1則(HTTP 403); lis.ly.gov.tw 1則(SSLError); ivod.ly.gov.tw 1則(SSLError); www.ndc.gov.tw 1則(HTTP 403); reg.815.mnd.gov.tw 1則(HTTP 403); reg.805.mnd.gov.tw 1則(HTTP 403); mab.mnd.gov.tw 1則(HTTP 403); friendlycampus.k12ea.gov.tw 1則(SSLError); w3.ccd.gov.tw 1則(HTTP 403); webreg.cnpc.gov.tw 1則(HTTP 403); tam.gov.taipei 1則(HTTP 404)"
+   "note": "www.tycg.gov.tw 1則(HTTP 428)"
   }
  }
 }

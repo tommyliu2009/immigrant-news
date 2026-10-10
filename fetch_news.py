@@ -11,6 +11,7 @@ class _SSLAdapter(HTTPAdapter):
         k['ssl_context'] = ctx; return super().init_poolmanager(*a, **k)
 _S = requests.Session(); _S.mount('https://', _SSLAdapter())
 from googlenewsdecoder import gnewsdecoder
+from pubdate import extract as extract_pubdate
 DAYS = int(sys.argv[1]) if len(sys.argv) > 1 else 30
 DB = 'news_db.json'; STATUS = 'source_status.json'
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36'}
@@ -76,11 +77,12 @@ def is_news(title, url):
 def relevant(text):
     return any(k in text for k in STRONG)
 
-def get_meta_summary(url):
+def get_meta_summary(url, title=''):
+    """回傳 (摘要, 狀態, 原文發布日)"""
     try:
         r = _S.get(url, headers=UA, timeout=20); r.encoding = r.apparent_encoding if not r.encoding or r.encoding.lower()=='iso-8859-1' else r.encoding
-        if r.status_code != 200: return None, f'HTTP {r.status_code}'
-        h = r.text; s = ''
+        if r.status_code != 200: return None, f'HTTP {r.status_code}', None
+        h = r.text; s = ''; pd = extract_pubdate(url, h, title)
         for pat in [r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\']([^"\']+)', r'<meta[^>]+name=["\']description["\'][^>]+content=["\']([^"\']+)',
                     r'<meta[^>]+content=["\']([^"\']+)["\'][^>]+(?:property|name)=["\'](?:og:)?description']:
             m = re.search(pat, h, re.I)
@@ -90,9 +92,9 @@ def get_meta_summary(url):
             ps = [html.unescape(p).strip() for p in ps if len(p.strip()) > 40]
             s = ps[0] if ps else ''
         s = re.sub(r'\s+', ' ', html.unescape(s)).strip()
-        return (s[:100] + ('…' if len(s) > 100 else '')) if s else '', 'ok'
+        return (s[:100] + ('…' if len(s) > 100 else '')) if s else '', 'ok', pd
     except Exception as e:
-        return None, type(e).__name__
+        return None, type(e).__name__, None
 
 def main():
     try: db = json.load(open(DB))
@@ -163,10 +165,18 @@ def main():
     todo = keep
     fail_hosts = {}
     def work(c):
-        s, st = get_meta_summary(c['url']); return c, s, st
+        s, st, pd = get_meta_summary(c['url'], c['title']); return c, s, st, pd
+    cutoff_date = (dt.date.today() - dt.timedelta(days=DAYS)).isoformat()
+    no_date = 0
     with cf.ThreadPoolExecutor(8) as ex:
-        for c, s, st in ex.map(work, todo):
+        for c, s, st, pd in ex.map(work, todo):
             host = urllib.parse.urlparse(c['url']).netloc
+            # 一律以原文頁面上的發布日為準；取不到（含原文打不開）就不收，下次再試
+            if not pd:
+                no_date += 1
+                if s is None: fail_hosts.setdefault(host, [0, st])[0] += 1
+                continue
+            if pd < cutoff_date: rejected.add(c['title']); continue
             if s is None:
                 fail_hosts.setdefault(host, [0, st])[0] += 1
                 d = re.sub(r'\s+', ' ', html.unescape(c.get('desc') or '')).strip()
@@ -175,12 +185,14 @@ def main():
             cat, unit = classify(c['url'], c['src'])
             if c['src'] == '內政部移民署': cat, unit = '中央', '內政部移民署'
             if not relevant(c['title'] + ' ' + s): rejected.add(c['title']); continue
-            date = dt.datetime(*c['pub'][:6], tzinfo=dt.timezone.utc).astimezone(dt.timezone(dt.timedelta(hours=8))).strftime('%Y-%m-%d')
+            date = pd
             db[c['url']] = dict(title=c['title'], url=c['url'], date=date, category=cat, unit=unit, summary=s,
                                 added=dt.datetime.now().strftime('%Y-%m-%d'))
     json.dump(sorted(rejected), open('rejected.json','w'), ensure_ascii=False)
     json.dump(db, open(DB, 'w'), ensure_ascii=False, indent=0)
-    status['_原文無法讀取的網站（僅保留標題連結）'] = {'ok': not fail_hosts, 'note': '; '.join(f'{h} {n}則({e})' for h,(n,e) in fail_hosts.items())}
+    status['_原文取不到發布日（未收錄）'] = {'ok': True, 'note': f'{no_date} 則'}
+    status['_原文無法讀取的網站（未收錄）'] = {'ok': not fail_hosts, 'note': '; '.join(f'{h} {n}則({e})' for h,(n,e) in fail_hosts.items())}
     json.dump(dict(updated=dt.datetime.now().strftime('%Y-%m-%d %H:%M'), sources=status), open(STATUS,'w'), ensure_ascii=False, indent=1)
     print('資料庫共', len(db), '則')
-main()
+if __name__ == '__main__':
+    main()
