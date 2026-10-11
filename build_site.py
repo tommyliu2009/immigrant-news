@@ -4,6 +4,6 @@ import json
 db = json.load(open('news_db.json')); st = json.load(open('source_status.json'))
 ok = [v for v in db.values() if v.get('summary_ok') and 50 <= len(v.get('summary','')) <= 200]
 items = sorted(ok, key=lambda v: v['date'], reverse=True)
-items = [{k: v[k] for k in ('title','url','date','category','unit','summary')} for v in items]
+items = [dict({k: v[k] for k in ('title','url','date','category','unit','summary')}, **({'topic': v['topic']} if v.get('topic') else {})) for v in items]
 open('data.js','w').write('window.NEWS=' + json.dumps(items, ensure_ascii=False) + ';\nwindow.UPDATED=' + json.dumps(st['updated']) + ';\n')
 print('網站資料', len(items), '則；未上線（待摘要）', len(db) - len(items), '則')
