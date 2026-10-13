@@ -17,6 +17,15 @@ DB = 'news_db.json'; STATUS = 'source_status.json'
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/124 Safari/537.36'}
 KW = ['新住民','新移民','外籍配偶','外配','陸配','移工','外籍勞工','外籍看護','移民','新二代','新住民子女','歸化','居留','移民署','東南亞','外國人']
 STRONG = ['新住民','新移民','外籍配偶','外配','陸配','移工','外籍勞工','外籍看護','移民','新二代','歸化','居留']
+
+def _shared_rss(u):
+    """共用 RSS 快取（/workspace/shared-data/rss_cache，3 小時內同來源只抓一次）；共用區有問題就直接連網。"""
+    try:
+        sys.path.insert(0, '/workspace/shared-data'); import shared
+        return shared.rss(u, _S, UA)
+    except Exception:
+        r = _S.get(u, headers=UA, timeout=25); return r.status_code, r.content
+
 RSS = {  # 名稱: (網址, 類別)
  '內政部移民署': ('https://www.immigration.gov.tw/5385/7445/rss', '中央'),
  '行政院': ('https://www.ey.gov.tw/RSS_Content.aspx?ModuleType=7', '中央'),
@@ -103,8 +112,8 @@ def main():
     cutoff = time.time() - DAYS*86400
     for name, (u, cat) in RSS.items():
         try:
-            r = _S.get(u, headers=UA, timeout=25); f = feedparser.parse(r.content)
-            if r.status_code != 200 or not f.entries: raise Exception(f'HTTP {r.status_code}, {len(f.entries)} 則')
+            sc, body = _shared_rss(u); f = feedparser.parse(body)
+            if sc != 200 or not f.entries: raise Exception(f'HTTP {sc}, {len(f.entries)} 則')
             n = 0
             for e in f.entries:
                 txt = (e.get('title','') + ' ' + re.sub('<[^>]+>','',e.get('summary','')))
