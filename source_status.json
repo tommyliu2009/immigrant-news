@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-14 04:50",
+ "updated": "2026-10-15 04:48",
  "sources": {
   "內政部移民署": {
    "ok": true,
@@ -19,11 +19,11 @@
   },
   "中央社-政治": {
    "ok": true,
-   "note": "20 則，相關 0"
+   "note": "20 則，相關 1"
   },
   "中央社-社會": {
    "ok": true,
-   "note": "20 則，相關 0"
+   "note": "20 則，相關 1"
   },
   "中央社-地方": {
    "ok": true,
@@ -35,15 +35,15 @@
   },
   "中央社-生活": {
    "ok": true,
-   "note": "20 則，相關 1"
+   "note": "20 則，相關 0"
   },
   "官方/中央社索引 (site:gov.tw)": {
    "ok": true,
-   "note": "候選 247 則"
+   "note": "候選 246 則"
   },
   "官方/中央社索引 (site:cna.com.tw)": {
    "ok": true,
-   "note": "候選 116 則"
+   "note": "候選 114 則"
   },
   "官方/中央社索引 (site:gov.taipei)": {
    "ok": true,
@@ -51,19 +51,19 @@
   },
   "索引 ntpc.gov.tw": {
    "ok": true,
-   "note": "相關 2"
+   "note": "相關 3"
   },
   "索引 tycg.gov.tw": {
    "ok": true,
-   "note": "相關 0"
+   "note": "相關 3"
   },
   "索引 taichung.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 2"
   },
   "索引 tainan.gov.tw": {
    "ok": true,
-   "note": "相關 5"
+   "note": "相關 4"
   },
   "索引 kcg.gov.tw": {
    "ok": true,
@@ -71,7 +71,7 @@
   },
   "索引 klcg.gov.tw": {
    "ok": true,
-   "note": "相關 0"
+   "note": "相關 2"
   },
   "索引 hccg.gov.tw": {
    "ok": true,
@@ -79,7 +79,7 @@
   },
   "索引 hsinchu.gov.tw": {
    "ok": true,
-   "note": "相關 2"
+   "note": "相關 1"
   },
   "索引 miaoli.gov.tw": {
    "ok": true,
@@ -87,7 +87,7 @@
   },
   "索引 chcg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 2"
   },
   "索引 nantou.gov.tw": {
    "ok": true,
@@ -147,11 +147,11 @@
   },
   "_原文取不到發布日（未收錄）": {
    "ok": true,
-   "note": "126 則"
+   "note": "123 則"
   },
   "_原文無法讀取的網站（未收錄）": {
    "ok": false,
-   "note": "dep-publicwork.hccg.gov.tw 2則(HTTP 403); www.hccg.gov.tw 6則(HTTP 403); www.tycg.gov.tw 4則(HTTP 428); www.ndc.gov.tw 2則(HTTP 403); webreg.hwln.mohw.gov.tw 1則(HTTP 403); 1957.mohw.gov.tw 1則(SSLError); atpass.ntpclib.gov.tw 1則(SSLError); register.typc.mohw.gov.tw 1則(SSLError); newreg.syh.mohw.gov.tw 1則(HTTP 403); netreg.puzih.mohw.gov.tw 1則(HTTP 403); chyiwww001.chyi.mohw.gov.tw 1則(HTTP 403); www03.taic.mohw.gov.tw 1則(HTTP 403); tslpt.moc.gov.tw 1則(HTTP 403); wfhr.hsinchu.gov.tw 1則(SSLError); social.yunlin.gov.tw 1則(HTTP 403)"
+   "note": "ppg.ly.gov.tw 1則(SSLError); dep-publicwork.hccg.gov.tw 2則(HTTP 403); www.hccg.gov.tw 4則(HTTP 403); www.ndc.gov.tw 4則(HTTP 403); www.tycg.gov.tw 5則(HTTP 428); culture.hccg.gov.tw 1則(HTTP 403); webreg.hwln.mohw.gov.tw 1則(HTTP 403); test.ttshb.gov.tw 1則(SSLError); 1957.mohw.gov.tw 1則(SSLError); atpass.ntpclib.gov.tw 1則(SSLError); social.yunlin.gov.tw 1則(HTTP 403)"
   }
  }
 }
