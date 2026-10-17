@@ -36,3 +36,8 @@ footer{background:#111;color:#bbb;padding:24px 0;font-size:14px}footer b{color:#
 .grid{grid-template-columns:1fr}.lead{padding:18px}.lead h2{font-size:23px}.lead .sum{font-size:16px}
 .sum{display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}.sum.open{display:block}.tog{display:block}.topbar #upd{display:none}}
 .tog[hidden]{display:none!important}
+/* 仁禾廣告：PC 右上、手機標題下方 */
+.rhad{float:right;order:9;margin-left:auto;display:flex;flex-direction:column;align-items:center;background:#fff7ee;border:2px solid #f08a24;border-radius:8px;padding:6px 16px;font-size:14px;line-height:1.4;text-align:center}
+.rhad b{color:#d2691e;font-size:16px}.rhad a,.rhm a{color:#1f4e8c}
+.rhm{display:none}
+@media(max-width:900px){.rhad{display:none}.rhm{display:block;background:#fff7ee;border:2px solid #f08a24;border-radius:8px;margin:12px auto 0;padding:8px 12px;text-align:center;font-size:14px;line-height:1.6;max-width:calc(100% - 28px)}.rhm b{color:#d2691e;font-size:18px}}
