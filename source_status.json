@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-25 04:45",
+ "updated": "2026-10-26 04:51",
  "sources": {
   "內政部移民署": {
    "ok": true,
@@ -39,15 +39,15 @@
   },
   "官方/中央社索引 (site:gov.tw)": {
    "ok": true,
-   "note": "候選 243 則"
+   "note": "候選 199 則"
   },
   "官方/中央社索引 (site:cna.com.tw)": {
    "ok": true,
-   "note": "候選 114 則"
+   "note": "候選 105 則"
   },
   "官方/中央社索引 (site:gov.taipei)": {
    "ok": true,
-   "note": "候選 107 則"
+   "note": "候選 106 則"
   },
   "索引 ntpc.gov.tw": {
    "ok": true,
@@ -55,7 +55,7 @@
   },
   "索引 tycg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 0"
   },
   "索引 taichung.gov.tw": {
    "ok": true,
@@ -67,11 +67,11 @@
   },
   "索引 kcg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 0"
   },
   "索引 klcg.gov.tw": {
    "ok": true,
-   "note": "相關 2"
+   "note": "相關 1"
   },
   "索引 hccg.gov.tw": {
    "ok": true,
@@ -87,7 +87,7 @@
   },
   "索引 chcg.gov.tw": {
    "ok": true,
-   "note": "相關 2"
+   "note": "相關 0"
   },
   "索引 nantou.gov.tw": {
    "ok": true,
@@ -151,7 +151,7 @@
   },
   "_原文無法讀取的網站（未收錄）": {
    "ok": false,
-   "note": "www.ndc.gov.tw 2則(HTTP 403); www.tnc.moj.gov.tw 1則(SSLError); ppg.ly.gov.tw 1則(SSLError); www.tycg.gov.tw 1則(ReadTimeout); srsch.mohw.gov.tw 1則(SSLError); register.typc.mohw.gov.tw 1則(SSLError); doit.gov.taipei 1則(ReadTimeout)"
+   "note": "lis.ly.gov.tw 3則(SSLError); www.hccg.gov.tw 1則(HTTP 504); www.ndc.gov.tw 1則(HTTP 403); travel.tycg.gov.tw 1則(HTTP 404); www.moc.gov.tw 2則(HTTP 403); 1957.mohw.gov.tw 1則(SSLError); register.typc.mohw.gov.tw 1則(SSLError)"
   }
  }
 }
