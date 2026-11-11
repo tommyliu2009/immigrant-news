@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-11 04:48",
+ "updated": "2026-11-12 04:45",
  "sources": {
   "內政部移民署": {
    "ok": true,
@@ -23,7 +23,7 @@
   },
   "中央社-社會": {
    "ok": true,
-   "note": "20 則，相關 1"
+   "note": "20 則，相關 0"
   },
   "中央社-地方": {
    "ok": true,
@@ -39,15 +39,15 @@
   },
   "官方/中央社索引 (site:gov.tw)": {
    "ok": true,
-   "note": "候選 190 則"
+   "note": "候選 192 則"
   },
   "官方/中央社索引 (site:cna.com.tw)": {
    "ok": true,
-   "note": "候選 123 則"
+   "note": "候選 113 則"
   },
   "官方/中央社索引 (site:gov.taipei)": {
    "ok": true,
-   "note": "候選 62 則"
+   "note": "候選 73 則"
   },
   "索引 ntpc.gov.tw": {
    "ok": true,
@@ -55,15 +55,15 @@
   },
   "索引 tycg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 2"
   },
   "索引 taichung.gov.tw": {
    "ok": true,
-   "note": "相關 2"
+   "note": "相關 3"
   },
   "索引 tainan.gov.tw": {
    "ok": true,
-   "note": "相關 0"
+   "note": "相關 1"
   },
   "索引 kcg.gov.tw": {
    "ok": true,
@@ -71,7 +71,7 @@
   },
   "索引 klcg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 2"
   },
   "索引 hccg.gov.tw": {
    "ok": true,
@@ -83,11 +83,11 @@
   },
   "索引 miaoli.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 0"
   },
   "索引 chcg.gov.tw": {
    "ok": true,
-   "note": "相關 8"
+   "note": "相關 12"
   },
   "索引 nantou.gov.tw": {
    "ok": true,
@@ -95,19 +95,19 @@
   },
   "索引 yunlin.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 0"
   },
   "索引 chiayi.gov.tw": {
    "ok": true,
-   "note": "相關 0"
+   "note": "相關 1"
   },
   "索引 cyhg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 2"
   },
   "索引 pthg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 2"
   },
   "索引 e-land.gov.tw": {
    "ok": true,
@@ -147,11 +147,11 @@
   },
   "_原文取不到發布日（未收錄）": {
    "ok": true,
-   "note": "63 則"
+   "note": "61 則"
   },
   "_原文無法讀取的網站（未收錄）": {
    "ok": false,
-   "note": "www.ndc.gov.tw 1則(HTTP 403); enews.moenv.gov.tw 1則(HTTP 403); foreigntalentact.ndc.gov.tw 1則(HTTP 403); www.cna.com.tw 1則(HTTP 404)"
+   "note": "www.ndc.gov.tw 1則(HTTP 403); www.tycg.gov.tw 1則(ReadTimeout); enews.moenv.gov.tw 1則(HTTP 403); www.moc.gov.tw 1則(HTTP 403); foreigntalentact.ndc.gov.tw 2則(HTTP 403); www.cna.com.tw 1則(HTTP 404); www.chiayi.gov.tw 1則(SSLError)"
   }
  }
 }
