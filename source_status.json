@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-16 04:49",
+ "updated": "2026-11-17 04:42",
  "sources": {
   "內政部移民署": {
    "ok": true,
@@ -19,11 +19,11 @@
   },
   "中央社-政治": {
    "ok": true,
-   "note": "20 則，相關 0"
+   "note": "20 則，相關 1"
   },
   "中央社-社會": {
    "ok": true,
-   "note": "20 則，相關 0"
+   "note": "20 則，相關 1"
   },
   "中央社-地方": {
    "ok": true,
@@ -39,39 +39,39 @@
   },
   "官方/中央社索引 (site:gov.tw)": {
    "ok": true,
-   "note": "候選 221 則"
+   "note": "候選 169 則"
   },
   "官方/中央社索引 (site:cna.com.tw)": {
    "ok": true,
-   "note": "候選 110 則"
+   "note": "候選 12 則"
   },
   "官方/中央社索引 (site:gov.taipei)": {
    "ok": true,
-   "note": "候選 70 則"
+   "note": "候選 53 則"
   },
   "索引 ntpc.gov.tw": {
    "ok": true,
-   "note": "相關 2"
+   "note": "相關 0"
   },
   "索引 tycg.gov.tw": {
    "ok": true,
-   "note": "相關 2"
+   "note": "相關 3"
   },
   "索引 taichung.gov.tw": {
    "ok": true,
-   "note": "相關 4"
+   "note": "相關 3"
   },
   "索引 tainan.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 0"
   },
   "索引 kcg.gov.tw": {
    "ok": true,
-   "note": "相關 0"
+   "note": "相關 1"
   },
   "索引 klcg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 2"
   },
   "索引 hccg.gov.tw": {
    "ok": true,
@@ -83,11 +83,11 @@
   },
   "索引 miaoli.gov.tw": {
    "ok": true,
-   "note": "相關 0"
+   "note": "相關 2"
   },
   "索引 chcg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 4"
   },
   "索引 nantou.gov.tw": {
    "ok": true,
@@ -99,11 +99,11 @@
   },
   "索引 chiayi.gov.tw": {
    "ok": true,
-   "note": "相關 2"
+   "note": "相關 0"
   },
   "索引 cyhg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 0"
   },
   "索引 pthg.gov.tw": {
    "ok": true,
@@ -127,7 +127,7 @@
   },
   "索引 kinmen.gov.tw": {
    "ok": true,
-   "note": "相關 4"
+   "note": "相關 1"
   },
   "索引 matsu.gov.tw": {
    "ok": true,
@@ -143,15 +143,15 @@
   },
   "索引 moi.gov.tw": {
    "ok": true,
-   "note": "相關 2"
+   "note": "相關 1"
   },
   "_原文取不到發布日（未收錄）": {
    "ok": true,
-   "note": "77 則"
+   "note": "37 則"
   },
   "_原文無法讀取的網站（未收錄）": {
    "ok": false,
-   "note": "www.tycg.gov.tw 4則(ReadTimeout); edu.chiayi.gov.tw 1則(SSLError); www.hlepb.gov.tw 1則(HTTP 500); www.moc.gov.tw 1則(HTTP 403); social.chiayi.gov.tw 1則(SSLError); www.ndc.gov.tw 1則(HTTP 403); cabu.kcg.gov.tw 1則(SSLError); okwork.gov.taipei 1則(ReadTimeout); eoc.gov.taipei 1則(ConnectTimeout)"
+   "note": "ipd.nat.gov.tw 2則(ConnectionError); www.tainan.gov.tw 1則(ReadTimeout); www.economic.taichung.gov.tw 3則(SSLError); www.ndc.gov.tw 1則(HTTP 403); www.tycg.gov.tw 1則(HTTP 404); www.chcg.gov.tw 1則(ReadTimeout); okwork.gov.taipei 1則(ReadTimeout); www.hbeitun.taichung.gov.tw 1則(SSLError)"
   }
  }
 }
