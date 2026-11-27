@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-26 04:50",
+ "updated": "2026-11-28 04:46",
  "sources": {
   "內政部移民署": {
    "ok": true,
@@ -39,23 +39,23 @@
   },
   "官方/中央社索引 (site:gov.tw)": {
    "ok": true,
-   "note": "候選 159 則"
+   "note": "候選 176 則"
   },
   "官方/中央社索引 (site:cna.com.tw)": {
    "ok": true,
-   "note": "候選 111 則"
+   "note": "候選 121 則"
   },
   "官方/中央社索引 (site:gov.taipei)": {
    "ok": true,
-   "note": "候選 115 則"
+   "note": "候選 69 則"
   },
   "索引 ntpc.gov.tw": {
    "ok": true,
-   "note": "相關 0"
+   "note": "相關 1"
   },
   "索引 tycg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 0"
   },
   "索引 taichung.gov.tw": {
    "ok": true,
@@ -63,7 +63,7 @@
   },
   "索引 tainan.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 2"
   },
   "索引 kcg.gov.tw": {
    "ok": true,
@@ -71,7 +71,7 @@
   },
   "索引 klcg.gov.tw": {
    "ok": true,
-   "note": "相關 5"
+   "note": "相關 1"
   },
   "索引 hccg.gov.tw": {
    "ok": true,
@@ -87,7 +87,7 @@
   },
   "索引 chcg.gov.tw": {
    "ok": true,
-   "note": "相關 0"
+   "note": "相關 1"
   },
   "索引 nantou.gov.tw": {
    "ok": true,
@@ -95,11 +95,11 @@
   },
   "索引 yunlin.gov.tw": {
    "ok": true,
-   "note": "相關 5"
+   "note": "相關 1"
   },
   "索引 chiayi.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 0"
   },
   "索引 cyhg.gov.tw": {
    "ok": true,
@@ -107,7 +107,7 @@
   },
   "索引 pthg.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 0"
   },
   "索引 e-land.gov.tw": {
    "ok": true,
@@ -143,15 +143,15 @@
   },
   "索引 moi.gov.tw": {
    "ok": true,
-   "note": "相關 1"
+   "note": "相關 2"
   },
   "_原文取不到發布日（未收錄）": {
    "ok": true,
-   "note": "71 則"
+   "note": "65 則"
   },
   "_原文無法讀取的網站（未收錄）": {
    "ok": false,
-   "note": "www.ndc.gov.tw 4則(HTTP 403); ppg.ly.gov.tw 1則(SSLError); www.kcg.gov.tw 1則(ConnectTimeout); www.tainan.gov.tw 1則(ConnectTimeout); www.etax.nat.gov.tw 1則(ConnectTimeout); howlife.cna.com.tw 1則(HTTP 404); dl.yunlin.gov.tw 1則(HTTP 403)"
+   "note": "www.tainan.gov.tw 2則(HTTP 410); www.tycg.gov.tw 1則(ReadTimeout); www.judicial.gov.tw 1則(HTTP 404); www.ntuh.gov.tw 1則(SSLError)"
   }
  }
 }
